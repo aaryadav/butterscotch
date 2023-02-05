@@ -12,8 +12,6 @@ import { Box } from '../components/box';
 import CopyBtn from '../components/copyBtn';
 
 const StyledPreview = styled(Box, {
-    backgroundColor: 'white',
-    color: 'black',
     padding: '1rem',
     width: '50%',
     height: '100vh',
@@ -29,6 +27,7 @@ const Preview = (props) => {
         <StyledPreview>
             <Box className='markdown-body' css={{ fontFamily: '$sans', width: '100%', height: '100%', overflow: 'auto' }}>
                 <ReactMarkdown
+                    style={{ backgroundColor: 'white', color: 'black' }}
                     remarkPlugins={[remarkGfm, remarkMath]}
                     rehypePlugins={[rehypeKatex]}
                     components={{

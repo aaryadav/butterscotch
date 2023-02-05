@@ -28,7 +28,7 @@ const useCodeMirror = (props) => {
                 }),
                 vscodeDarkInit({
                     settings: {
-                        fontFamily: 'JetBrains Mono',
+                        fontFamily: '$mono',
                     }
                 }),
                 EditorView.lineWrapping,
