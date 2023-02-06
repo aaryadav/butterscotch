@@ -5,11 +5,11 @@ import { Box } from '../components/box';
 
 const StyledSidebar = styled(Box, {
     display: 'flex',
-    marginTop: '80px',
+    paddingTop: '80px',
     position: 'fixed',
     flexDirection: 'column',
     width: '250px',
-    height: '100vh',
+    height: '100%',
     overflow: 'auto',
     overscrollBehavior: 'contain',
     zIndex: '1',
@@ -56,14 +56,23 @@ const NavItem = styled(Box, {
     }
 })
 
-const Sidebar = ({ items, theme }) => {
+const Sidebar = ({ items, bItems, theme }) => {
     return (
-        <StyledSidebar theme={theme} css={{ '& > *:first-child': { marginTop: '30px' } }}>
-            {items.map((item) => (
-                <NavItem theme={theme} key={item.id}>
-                    {item.title}
-                </NavItem>
-            ))}
+        <StyledSidebar theme={theme} css={{ '& > *:first-child': { marginTop: '25px' }, justifyContent: 'space-between' }}>
+            <Box css={{ flexDirection: 'column' }}>
+                {items.map((item) => (
+                    <NavItem theme={theme} key={item.id}>
+                        {item.title}
+                    </NavItem>
+                ))}
+            </Box>
+            {/* <Box>
+                {bItems.map((item) => (
+                    <NavItem theme={theme} key={item.id} css={{ color:'$slate10', cursor: 'pointer' }}>
+                        <span>{item.title} <a href={item.src}>{item.link}</a></span>
+                    </NavItem>
+                ))}
+            </Box> */}
         </StyledSidebar>
     );
 }

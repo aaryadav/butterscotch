@@ -20,9 +20,7 @@ const StyledPreview = styled(Box, {
 });
 
 const Preview = (props) => {
-    const doc = props.doc.doc.text;
-    const markdown = doc.join('\n');
-
+    const markdown  = props.doc;
     return (
         <StyledPreview>
             <Box className='markdown-body' css={{ display: 'block', backgroundColor: 'white', color: 'black', fontFamily: '$sans', width: '100%', height: '100%', overflow: 'auto' }}>

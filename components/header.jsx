@@ -7,7 +7,7 @@ const StyledHeader = styled(Box, {
     width: '100%',
     height: '80px',
     backgroundColor: '#fff',
-    zIndex: '1',
+    zIndex: '10',
     variants: {
         theme: {
             corp: {

@@ -4,7 +4,7 @@ import { Box } from '../components/box';
 const StyledContent = styled(Box, {
     position: 'absolute',
     display: 'flex',
-    margin: '80px 120px',
+    margin: '100px 120px',
     padding: '50px 200px',
     flexDirection: 'column',
     width: '96%',

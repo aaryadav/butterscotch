@@ -18,7 +18,7 @@ const Editor = (props) => {
 
     const [refContainer, editorView] = useCodeMirror({
         initialDoc,
-        onChange
+        onChange: handleChange
     })
 
     useEffect(() => {

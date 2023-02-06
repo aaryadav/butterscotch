@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from 'react'
 import { basicSetup } from 'codemirror'
 import { EditorState, Compartment } from '@codemirror/state'
 import { EditorView, keymap } from '@codemirror/view'
-import { defaultKeymap } from '@codemirror/commands'
+import { indentWithTab } from '@codemirror/commands'
 import { markdown, markdownLanguage } from '@codemirror/lang-markdown'
 import { languages } from '@codemirror/language-data'
 import { vscodeDarkInit } from '@uiw/codemirror-theme-vscode';
@@ -20,7 +20,7 @@ const useCodeMirror = (props) => {
             doc: props.initDoc,
             extensions: [
                 basicSetup,
-                keymap.of(defaultKeymap),
+                keymap.of([indentWithTab]),
                 markdown({
                     base: markdownLanguage,
                     codeLanguages: languages,
