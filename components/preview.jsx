@@ -25,7 +25,7 @@ const Preview = (props) => {
 
     return (
         <StyledPreview>
-            <Box className='markdown-body' css={{ backgroundColor: 'white', color: 'black', fontFamily: '$sans', width: '100%', height: '100%', overflow: 'auto' }}>
+            <Box className='markdown-body' css={{ display: 'block', backgroundColor: 'white', color: 'black', fontFamily: '$sans', width: '100%', height: '100%', overflow: 'auto' }}>
                 <ReactMarkdown
                     remarkPlugins={[remarkGfm, remarkMath]}
                     rehypePlugins={[rehypeKatex]}
